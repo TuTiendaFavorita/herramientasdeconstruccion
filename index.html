@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./img/icono.png">
+    <link rel="stylesheet" href="store.css">
+    <title>SAVEC | Albañil</title>
+</head>
+<body>
+    <header>
+        <img src="./img/icono.png" alt="" srcset="">
+        <b>SAVEC</b>
+    </header>
+
+    <main>
+        <script>
+            var store = [
+                {name: "Barrilejo Petrul", img: "./img/store/01.jpg", info: "Fabricada en acero al carbono.  Mango fabricado en madera de fresno. Casquillo metálico que refuerza el encabado", precio: "3.50"},
+                {name: "Taladro Truper", img: "./img/store/02.jpg", info: "Motor de 600 W, balero de bolas que prolonga la vida útil de la máquina. Selector de función taladro o rotomartillo, con velocidad variable reversible", precio: "67.00"},
+                {name: "Mezclador concreto", img: "./img/store/08.jpg", info: "Fabricada en planchas estructurales de acero de 3/16’’ y de 1/8’’ Estructura sólida al trabajo rutinario. Sistema de transmisión sobre ejes de acero. ", precio: "1099.00"},
+                {name: "Generador electrico", img: "./img/store/09.jpg", info: "Generador de energía a gasolina 2800W Power Force", precio: "529.00"},
+                {name: "Carretilla Truper", img: "./img/store/03.jpg", info: "Llanta neumática reforzada con rin de 3 aspas, diseño robusto y resistente al desgaste, rodada con mayor estabilidad. Concha de lámina calibre 21 (0.84 mm)", precio: "43.00"},
+                {name: "Lampa", img: "./img/store/04.jpg", info: "Cabeza con doble tratamiento térmico, recubrimiento en pintura gris, con alta resistencia a la corrosión.", precio: "21.00"},
+
+                {name: "Caja de herramientas", img: "./img/store/05.jpg", info: "Segunda Mano. Diversas Herramientas Profesionales", precio: "49.00"},
+
+                {name: "Kit Albañil", img: "./img/store/06.jpg", info: "Taladro, Martillos, LLave inglesa, Casco de seguridad, Nivel de mano", precio: "99.00"},
+
+                {name: "Martillo", img: "./img/store/07.jpg", info: "Martillo bellota. Herramienta perfecta de percusión y cincelado al alcance  de su bolsillo", precio: "9.50"},
+
+
+
+        ]
+
+        for (let i = 0; i < store.length; i++) {
+            // const element = array[i];
+            console.log(i)
+            
+            document.write(`
+            <section class="product">
+                <img src="${store[i].img}" alt="Producto 1">
+                <h2>${store[i].name}</h2>
+                <p>${store[i].info}</p>
+                <span class="price">s/. ${store[i].precio}</span>
+                <button>Añadir al Carrito</button>
+            </section>
+            `)
+
+        }
+        setTimeout(function() {
+            window.location.href = "index.html";
+        }, 20000);
+        // 30 seg: 30000
+
+        </script>
+        
+        <!-- Agrega más secciones de productos según sea necesario -->
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tienda Básica. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

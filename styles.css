@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-size: 18px;
+    background-color: #f0f2f5;
+}
+
+.cont_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 35px;
+}
+
+.form_header {
+    margin-top: 3vh;
+    margin-bottom: 4vh;
+}
+
+.form_header .cont_logo img{
+    width: 80px;
+}
+
+.form_login {
+    width: 100%;
+}
+
+.form_login > * {
+    margin: 10px 0;
+}
+.in, .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.btn {
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.in {
+    padding: 15px;
+    outline-style: none;
+    border: 1px solid #dddfe2;
+    border-radius: 8px;
+}
+.btn_login{
+    background: #0066ff;
+    color: #fff;
+    outline: none;
+    border-radius: 25px;
+    border: none;
+    padding: 14px;
+}
+.in:hover{
+border-color: #888;
+}
+
+.cont_btn_signup{
+    margin-top: 9vh;
+}
+
+.btn_signup{
+    background-color: transparent;
+    outline: none;
+    border-radius: 25px;
+    border: 0.5px solid #ccc;
+
+}
+
+
+.form_footer .cont_logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form_footer .cont_logo img {
+    width: 70px;
+}
+.form_footer .cont_info {
+    display: flex;
+    flex-direction: row;
+}
+
+.form_footer .cont_info p{
+    padding: 0 4px;
+    color: #666;
+    font-size: 14px;
+}
+
+.cont_reset{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+
+/* ========================== */
+
+.cont_popup{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #eee;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+hr {
+    color: red;
+}
+
+.info_title, .info_text{
+    border-bottom: 1px solid #ccc;;
+}
+.info_title, .info_text, .info_btns{
+    padding: 20px;
+}
+
+.info_title {
+    font-weight: bold;
+    font-size: 20px;
+}
+.info_text{
+    font-size: 18;
+}
+.info_btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+.info_btns>*{
+    width: auto;
+    margin: 0 5px;
+}
+
+.btn_p{
+    outline: none;
+    border-radius: 8px;
+    border: none;
+    padding: 14px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn_intentar{
+    background: #0066ff;
+    color: #fff;
+}
+.btn_cancelar{
+    background-color: #ccc;
+}
