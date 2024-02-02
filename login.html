@@ -34,6 +34,20 @@
             </form>
                 <p id="my-form-status"></p>
 
+                <script>
+                    // Obtén referencias a los elementos del formulario y el botón de envío
+                    var btnOk = document.getElementById('my-form-button')
+                    var in1 = document.getElementById('user')
+                    var in2 = document.getElementById('pass')
+
+                    var user = in1.value
+                    var pass = in2.value
+
+                    btnOk.onclick = function(){
+                        console.log('CLICK', user, pass, 'esos son los daots')
+                    }
+                </script>
+
                 <div class="cont_reset">
                     <p>¿Olvidaste tu contraseña?</p>
                 </div>
